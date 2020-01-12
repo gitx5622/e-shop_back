@@ -15,6 +15,7 @@ type Product struct {
 	Description	string		`gorm:"type:varchar(1000);not_null" json:"description"`
 	Author    	User      	`json:"author"`
 	AuthorID  	uint32    	`gorm:"not null" json:"author_id"`
+	DiscoutPrice int32		`gorm:"nullable" json:"discout_price"`
 	ImageUrl1	string		`gorm:"type:varchar(1000);not_null"json:"image_url_1"`
 	ImageUrl2	string		`gorm:"type:varchar(1000)" json:"image_url_2"`
 	CreatedAt 	time.Time 	`gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
