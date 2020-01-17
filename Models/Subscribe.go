@@ -27,7 +27,7 @@ func (s *Subscribe) Validate() map[string]string {
 		err = errors.New("Email is Required")
 		errorMessages["Required_email"] = err.Error()
 	}
-	
+
 	if s.Email != "" {
 		if err = checkmail.ValidateFormat(s.Email); err != nil {
 			err = errors.New("Invalid Email")

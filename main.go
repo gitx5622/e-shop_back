@@ -30,6 +30,6 @@ func main()  {
 	r := router.SetupRoutes()
 	r.Use(gin.Recovery())
 	// running
-	_ = r.Run(":9000")
+	_ = r.Run(":8000")
 
 }
