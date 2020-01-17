@@ -19,7 +19,6 @@ func FormatError(errString string) map[string]string {
 		errorMessages["Taken_email"] = "Email Already Taken"
 
 	}
-
 	if strings.Contains(errString, "hashedPassword") {
 		errorMessages["Incorrect_password"] = "Incorrect Password"
 	}

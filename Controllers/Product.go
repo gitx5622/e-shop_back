@@ -111,6 +111,7 @@ func GetProducts(c *gin.Context) {
 }
 
 
+
 func GetProduct(c *gin.Context) {
 	errList := map[string]string{}
 

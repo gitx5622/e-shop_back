@@ -19,6 +19,7 @@ func SetupRoutes() *gin.Engine {
 		v1.GET("/getproducts", Controllers.GetProducts)
 		v1.PUT("/updateproduct/:id", Controllers.UpdateProduct)
 		v1.GET("/getproduct/:id", Controllers.GetProduct)
+		v1.POST("/subscribe", Controllers.Subscribe)
 
 	}
 

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88911b4c-e00f-4124-8282-84bf9cb16c10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Product.go" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Product.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/ErrorMessages.go" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/ErrorMessages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Web/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-shop" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

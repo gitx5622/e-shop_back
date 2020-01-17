@@ -24,6 +24,7 @@ func main()  {
 	// Migrations
 	Config.DB.AutoMigrate(&Models.User{})
 	Config.DB.AutoMigrate(&Models.Product{})
+	Config.DB.AutoMigrate(&Models.Subscribe{})
 
 	// Setup routes
 	r := router.SetupRoutes()
