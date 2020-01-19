@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88911b4c-e00f-4124-8282-84bf9cb16c10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Forms/StkPush.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/MpesaStkPush.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/ErrorMessages.go" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/ErrorMessages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Address.go" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Address.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Product.go" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/Models/User.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Web/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jwtapp/Controllers/Message.go" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -62,6 +69,15 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build e-shop" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="e-shop" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="e-shop" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="e-shop" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -73,6 +89,11 @@
       <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build e-shop" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />

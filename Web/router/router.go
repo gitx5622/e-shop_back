@@ -22,8 +22,9 @@ func SetupRoutes() *gin.Engine {
 		v1.POST("/subscribe", Controllers.Subscribe)
 		v1.POST("/createaddress", Controllers.CreateAddress)
 		v1.GET("/user_address/:id", Controllers.GetUserAddress)
+		v1.POST("/stkpush", Controllers.MpesaExpress)
+		v1.POST("/message", Controllers.SendMessages)
 	}
 
 	return r
 }
-

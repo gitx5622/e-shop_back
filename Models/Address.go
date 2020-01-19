@@ -9,17 +9,17 @@ import (
 )
 
 type Address struct {
-	ID			uint32			`gorm:"auto_increment;primary_key" json:"id"`
-	FirstName	string			`gorm:"type:varchar(100);not_null;" json:"first_name"`
-	LastName	string			`gorm:"type:varchar(100);not_null;" json:"last_name"`
-	Address		string			`gorm:"type:varchar(100);not_null;unique" json:"address"`
-	Author    	User      		`json:"author"`
-	AuthorID  	uint32    		`gorm:"not null" json:"author_id"`
-	City		string			`gorm:"type:varchar(100);not_null" json:"city"`
-	Country		string			`json:"country" gorm:"default:'Kenya'"`
-	PostalCode	string			`json:"postal_code" gorm:"default:'00200'"`
-	CreatedAt 	time.Time 		`gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
-	UpdatedAt 	time.Time 		`gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
+	ID         uint32    `gorm:"auto_increment;primary_key" json:"id"`
+	FirstName  string    `gorm:"type:varchar(100);not_null;" json:"first_name"`
+	LastName   string    `gorm:"type:varchar(100);not_null;" json:"last_name"`
+	Address    string    `gorm:"type:varchar(100);not_null;unique" json:"address"`
+	Author     User      `json:"author"`
+	AuthorID   uint32    `gorm:"not null" json:"author_id"`
+	City       string    `gorm:"type:varchar(100);not_null" json:"city"`
+	Country    string    `json:"country" gorm:"default:'Kenya'"`
+	PostalCode string    `json:"postal_code" gorm:"default:'00200'"`
+	CreatedAt  time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
+	UpdatedAt  time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
 }
 
 func (u *Address) Prepare() {
@@ -45,7 +45,7 @@ func (s *Address) Validate() map[string]string {
 		err = errors.New("Last Name is Required")
 		errorMessages["Required_lastname"] = err.Error()
 	}
-	if s.Address== "" {
+	if s.Address == "" {
 		err = errors.New("Address is Required")
 		errorMessages["Required_address"] = err.Error()
 	}
@@ -84,7 +84,6 @@ func (s *Address) SaveAddress(db *gorm.DB) (*Address, error) {
 	return s, nil
 
 }
-
 
 func (p *Address) FindUserAddress(db *gorm.DB, uid uint32) (*[]Address, error) {
 

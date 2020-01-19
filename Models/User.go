@@ -3,8 +3,8 @@ package Models
 import (
 	"e-shop/Utils"
 	"errors"
-	"github.com/jinzhu/gorm"
 	"github.com/badoux/checkmail"
+	"github.com/jinzhu/gorm"
 	"html"
 	"strings"
 	"time"
@@ -34,7 +34,6 @@ func (u *User) Prepare() {
 	u.CreatedAt = time.Now()
 	u.UpdatedAt = time.Now()
 }
-
 
 func (u *User) Validate(action string) map[string]string {
 	var errorMessages = make(map[string]string)
@@ -106,7 +105,6 @@ func (u *User) Validate(action string) map[string]string {
 	}
 	return errorMessages
 }
-
 
 func (s *User) SaveUser(db *gorm.DB) (*User, error) {
 	var err error

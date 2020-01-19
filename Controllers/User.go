@@ -13,7 +13,7 @@ import (
 	"net/http"
 )
 
-func CreateUser(c *gin.Context)  {
+func CreateUser(c *gin.Context) {
 
 	//clear previous erro if any
 	errList := map[string]string{}
@@ -56,7 +56,7 @@ func CreateUser(c *gin.Context)  {
 		errList = formattedError
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"status": http.StatusInternalServerError,
-			"error": errList,
+			"error":  errList,
 		})
 		return
 	}
@@ -73,9 +73,9 @@ func Login(c *gin.Context) {
 	body, err := ioutil.ReadAll(c.Request.Body)
 	if err != nil {
 		errList["Invalid_body"] = "Unable to read body"
-		c.JSON(http.StatusUnprocessableEntity, gin.H {
+		c.JSON(http.StatusUnprocessableEntity, gin.H{
 			"status": http.StatusUnprocessableEntity,
-			"error": errList,
+			"error":  errList,
 		})
 		return
 	}
@@ -83,19 +83,19 @@ func Login(c *gin.Context) {
 	user := Models.User{}
 	err = json.Unmarshal(body, &user)
 	if err != nil {
-		errList["Unmarshal_error"] ="Unable to unmarchal body"
-		c.JSON(http.StatusUnprocessableEntity, gin.H {
+		errList["Unmarshal_error"] = "Unable to unmarchal body"
+		c.JSON(http.StatusUnprocessableEntity, gin.H{
 			"status": http.StatusUnprocessableEntity,
-			"error": errList,
+			"error":  errList,
 		})
 		return
 	}
 	user.Prepare()
 	errorMessages := user.Validate("login")
 	if len(errorMessages) > 0 {
-		c.JSON(http.StatusUnprocessableEntity, gin.H {
+		c.JSON(http.StatusUnprocessableEntity, gin.H{
 			"status": http.StatusUnprocessableEntity,
-			"error": errorMessages,
+			"error":  errorMessages,
 		})
 		return
 	}
@@ -103,9 +103,9 @@ func Login(c *gin.Context) {
 	if err != nil {
 		formattedError := Utils.FormatError(err.Error())
 		c.JSON(http.StatusUnprocessableEntity, gin.H{
-		"status": http.StatusUnprocessableEntity,
-		"error":  formattedError,
-	})
+			"status": http.StatusUnprocessableEntity,
+			"error":  formattedError,
+		})
 		return
 	}
 	c.JSON(http.StatusOK, gin.H{

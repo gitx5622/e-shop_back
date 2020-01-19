@@ -9,21 +9,20 @@ import (
 )
 
 type Product struct {
-	ID			uint32		`gorm:"primary_key;auto_increment" json:"id"`
-	Title		string		`gorm:"type:varchar(100);not_null;unique" json:"title"`
-	Price		string		`gorm:"type:varchar(100);not_null;" json:"price"`
-	Description	string		`gorm:"type:varchar(1000);not_null" json:"description"`
-	Author    	User      	`json:"author"`
-	AuthorID  	uint32    	`gorm:"not null" json:"author_id"`
-	DiscoutPrice int32		`gorm:"nullable" json:"discout_price"`
-	ImageUrl1	string		`gorm:"type:varchar(1000);not_null"json:"image_url_1"`
-	ImageUrl2	string		`gorm:"type:varchar(1000)" json:"image_url_2"`
-	CreatedAt 	time.Time 	`gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
-	UpdatedAt 	time.Time 	`gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
-
+	ID           uint32    `gorm:"primary_key;auto_increment" json:"id"`
+	Title        string    `gorm:"type:varchar(100);not_null;unique" json:"title"`
+	Price        string    `gorm:"type:varchar(100);not_null;" json:"price"`
+	Description  string    `gorm:"type:varchar(1000);not_null" json:"description"`
+	Author       User      `json:"author"`
+	AuthorID     uint32    `gorm:"not null" json:"author_id"`
+	DiscoutPrice int32     `gorm:"nullable" json:"discout_price"`
+	ImageUrl1    string    `gorm:"type:varchar(1000);not_null"json:"image_url_1"`
+	ImageUrl2    string    `gorm:"type:varchar(1000)" json:"image_url_2"`
+	CreatedAt    time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
+	UpdatedAt    time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
 }
 
-func (s *Product) Prepare()  {
+func (s *Product) Prepare() {
 	s.Title = html.EscapeString(strings.TrimSpace(s.Title))
 	s.Price = html.EscapeString(strings.TrimSpace(s.Price))
 	s.Description = html.EscapeString(strings.TrimSpace(s.Description))
@@ -35,7 +34,7 @@ func (s *Product) Prepare()  {
 
 }
 
-func (s *Product) Validate() map[string]string  {
+func (s *Product) Validate() map[string]string {
 	var err error
 
 	var errorMessages = make(map[string]string)
@@ -69,7 +68,7 @@ func (s *Product) Validate() map[string]string  {
 	return errorMessages
 }
 
-func (s *Product) SaveProduct(db *gorm.DB) (*Product, error)  {
+func (s *Product) SaveProduct(db *gorm.DB) (*Product, error) {
 	var err error
 	err = db.Debug().Model(&Product{}).Create(&s).Error
 	if err != nil {
@@ -102,7 +101,6 @@ func (p *Product) FindAllProducts(db *gorm.DB) (*[]Product, error) {
 	return &products, nil
 }
 
-
 func (p *Product) FindProductByID(db *gorm.DB, pid uint64) (*Product, error) {
 	var err error
 	err = db.Debug().Model(&Product{}).Where("id = ?", pid).Take(&p).Error
@@ -117,7 +115,6 @@ func (p *Product) FindProductByID(db *gorm.DB, pid uint64) (*Product, error) {
 	}
 	return p, nil
 }
-
 
 func (p *Product) UpdateAProduct(db *gorm.DB) (*Product, error) {
 
