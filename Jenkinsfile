@@ -30,7 +30,7 @@ pipeline {
 
                 stage ('Running tha Application'){
                     steps{
-                        sh "docker compose up"
+                        sh "docker-compose up"
                     }
                 }
 
