@@ -30,7 +30,7 @@ pipeline {
 
                 stage ('Running tha Application'){
                     steps{
-                        sh "docker-compose up"
+                        sh "docker run gits5622/eshop"
                     }
                 }
 
